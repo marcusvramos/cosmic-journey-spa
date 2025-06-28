@@ -1,6 +1,10 @@
 import React from "react";
 import { createPortal } from "react-dom";
 import "./styles.scss";
+import logoIcon from "../../assets/icons/logo.svg";
+import cartIcon from "../../assets/icons/cart.svg";
+import menuIcon from "../../assets/icons/menu.svg";
+import closeIcon from "../../assets/icons/close.svg";
 
 function Header({ isMobileMenuOpen, toggleMobileMenu }) {
   const navItems = ["Home", "Products"];
@@ -17,7 +21,7 @@ function Header({ isMobileMenuOpen, toggleMobileMenu }) {
         onClick={toggleMobileMenu}
         aria-label="Close menu"
       >
-        <img src="/icons/close.svg" alt="Close menu" />
+        <img src={closeIcon} alt="Close menu" />
       </button>
       <ul className="header__nav-mobile-list">
         {navItems.map((item, idx) => (
@@ -41,7 +45,7 @@ function Header({ isMobileMenuOpen, toggleMobileMenu }) {
         <div className="header__container">
           <div className="header__logo">
             <img
-              src="/icons/logo.svg"
+              src={logoIcon}
               alt="Space Logo"
               className="header__logo-img"
             />
@@ -66,7 +70,7 @@ function Header({ isMobileMenuOpen, toggleMobileMenu }) {
           <div className="header__right">
             <button className="header__cart-btn" aria-label="Shopping cart">
               <img
-                src="/icons/cart.svg"
+                src={cartIcon}
                 alt="Cart"
                 className="header__cart-icon"
               />
@@ -79,7 +83,7 @@ function Header({ isMobileMenuOpen, toggleMobileMenu }) {
               aria-expanded={isMobileMenuOpen}
             >
               <img
-                src={isMobileMenuOpen ? "/icons/close.svg" : "/icons/menu.svg"}
+                src={isMobileMenuOpen ? closeIcon : menuIcon}
                 alt={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 className="header__burger-icon"
               />

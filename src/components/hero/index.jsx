@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.scss";
+import earthImg from "../../assets/images/earth.png";
 
 function Hero() {
   return (
@@ -21,7 +22,7 @@ function Hero() {
 
         <div className="hero__visual">
           <img
-            src="/images/earth.png"
+            src={earthImg}
             alt="Planet Earth with satellites"
             className="hero__earth-img"
           />

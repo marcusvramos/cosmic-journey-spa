@@ -1,4 +1,5 @@
 import "./styles.scss";
+import rocketIcon from "../../assets/icons/rocket.svg";
 
 function Footer() {
   return (
@@ -6,7 +7,7 @@ function Footer() {
       <div className="footer__container">
         <div className="footer__icon">
           <img
-            src="/icons/rocket.svg"
+            src={rocketIcon}
             alt="Rocket Icon"
           />
         </div>

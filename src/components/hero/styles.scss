@@ -2,7 +2,7 @@
 @use "../../styles/mixins" as mixins;
 
 .hero {
-  background: url("../../../public/images/hero-bg.png") center/cover no-repeat;
+  background: url("../../assets/images/hero-bg.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
