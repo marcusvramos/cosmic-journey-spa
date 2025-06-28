@@ -1,14 +1,23 @@
 {
   "files": {
-    "main.css": "/cosmic-journey-spa/static/css/main.c3a99daf.css",
-    "main.js": "/cosmic-journey-spa/static/js/main.9859cde1.js",
-    "static/media/hero-bg.png": "/cosmic-journey-spa/static/media/hero-bg.4aab6891aa0154909619.png",
-    "index.html": "/cosmic-journey-spa/index.html",
-    "main.c3a99daf.css.map": "/cosmic-journey-spa/static/css/main.c3a99daf.css.map",
-    "main.9859cde1.js.map": "/cosmic-journey-spa/static/js/main.9859cde1.js.map"
+    "main.css": "./static/css/main.24ca82a6.css",
+    "main.js": "./static/js/main.60182886.js",
+    "static/media/hero-bg.png": "./static/media/hero-bg.4aab6891aa0154909619.png",
+    "static/media/space-bg-2.png": "./static/media/space-bg-2.465b897154e9993b945a.png",
+    "static/media/space-bg-4.png": "./static/media/space-bg-4.69c8007cfc68cbbb8978.png",
+    "static/media/space-bg-1.png": "./static/media/space-bg-1.9bb9cfbb562273ec5b4a.png",
+    "static/media/space-bg-3.png": "./static/media/space-bg-3.1ed7c393a65058a5eb49.png",
+    "static/media/earth.png": "./static/media/earth.47286a3dcf686232735c.png",
+    "static/media/logo.svg": "./static/media/logo.581b16a7e553cb91be46f984533235a4.svg",
+    "static/media/cart.svg": "./static/media/cart.5fdc8f10c95015c32240615c1ad34fbf.svg",
+    "static/media/menu.svg": "./static/media/menu.7e65dcdbfcb4fb7f60ea90f61a0ab5f8.svg",
+    "static/media/close.svg": "./static/media/close.60d4f41347544050a7b9d2915be4e499.svg",
+    "index.html": "./index.html",
+    "main.24ca82a6.css.map": "./static/css/main.24ca82a6.css.map",
+    "main.60182886.js.map": "./static/js/main.60182886.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3a99daf.css",
-    "static/js/main.9859cde1.js"
+    "static/css/main.24ca82a6.css",
+    "static/js/main.60182886.js"
   ]
 }
