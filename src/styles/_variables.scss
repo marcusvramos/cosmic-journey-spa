@@ -9,9 +9,6 @@ $text-gray: #cccccc;
 $text-dark: #000000;
 
 $font-primary: 'Lato', sans-serif; 
-$font-secondary: 'Arial', sans-serif;
-
-$mobile: 375px;
 $tablet: 768px;
 $desktop: 1200px;
 
@@ -21,3 +18,9 @@ $spacing-md: 24px;
 $spacing-lg: 32px;
 $spacing-xl: 48px;
 $spacing-xxl: 64px;
+
+$container-max-width: 1200px;
+$header-height: 70px;
+$border-radius-default: 8px;
+$border-radius-large: 16px;
+$border-radius-full: 100px;

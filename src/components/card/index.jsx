@@ -1,4 +1,5 @@
 import "./styles.scss";
+import Button from "../button";
 
 function Card({
   title,
@@ -18,7 +19,7 @@ function Card({
 
       <div className="card__content">
         <h3 className="card__title">{title}</h3>
-        <p className="card__subtitle">{subtitle}</p>
+        <p className="card__subtitle" dangerouslySetInnerHTML={{ __html: subtitle }}></p>
 
         {description && (
           <div className="card__description">
@@ -26,9 +27,9 @@ function Card({
           </div>
         )}
 
-        <button className="card__btn button button--secondary" aria-label={`Learn more about ${title}`}>
+        <Button variant="secondary" className="card__btn" aria-label={`Learn more about ${title}`}>
           Learn more
-        </button>
+        </Button>
       </div>
     </div>
   );

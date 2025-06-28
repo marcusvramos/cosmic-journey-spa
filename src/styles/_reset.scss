@@ -14,7 +14,7 @@ body {
   font-family: vars.$font-primary;
   line-height: 1.6;
   color: vars.$text-light;
-  padding-top: 70px;
+  padding-top: vars.$header-height;
 }
 
 img {

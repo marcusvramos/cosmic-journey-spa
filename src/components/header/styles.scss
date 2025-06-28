@@ -14,13 +14,24 @@
     justify-content: flex-start;
     align-items: center;
     padding: vars.$spacing-lg vars.$spacing-md;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 70px;
+    height: vars.$header-height;
+    @include mixins.container;
 
     @include mixins.mobile {
       justify-content: space-between;
       padding: vars.$spacing-sm vars.$spacing-sm;
+    }
+  }
+
+  &__logo {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
     }
   }
 
@@ -89,7 +100,7 @@
     border: none;
     cursor: pointer;
     padding: vars.$spacing-xs;
-    border-radius: 8px;
+    border-radius: vars.$border-radius-default;
     color: vars.$text-light;
     transition: all 0.3s ease;
 

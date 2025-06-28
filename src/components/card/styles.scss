@@ -3,87 +3,45 @@
 
 .card {
   position: relative;
-  border-radius: 16px;
+  border-radius: vars.$border-radius-large;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  }
+  @include mixins.card-hover;
 
   &--large {
-    grid-column: 1 / -1;
     min-height: 350px;
 
-    .card__content {
-      max-width: 700px;
-      padding: vars.$spacing-xl vars.$spacing-xxl;
-    }
-
-    .card__title {
-      font-size: clamp(2rem, 5vw, 4rem);
-    }
-
-    .card__subtitle {
-      font-size: clamp(1rem, 2vw, 1.3rem);
-      font-weight: 800;
-    }
-
-    @include mixins.mobile {
-      .card__content {
-        padding: vars.$spacing-lg;
-      }
+    @include mixins.desktop {
+      grid-column: 1 / -1;
 
       .card__title {
-        font-size: clamp(2.6rem, 5vw, 4rem);
+        font-size: clamp(2rem, 4vw, 3rem);
+        max-width: 400px;
       }
 
-      .card__subtitle {
-        font-size: clamp(1rem, 2vw, 1.3rem);
+      .card__content {
+        max-width: 700px;
+        padding: vars.$spacing-xl vars.$spacing-md;
       }
     }
+
+    @include mixins.card-tablet-styles;
+    @include mixins.card-mobile-styles;
   }
 
   &--medium {
     min-height: 280px;
 
     .card__content {
-      padding: vars.$spacing-lg vars.$spacing-lg vars.$spacing-md;
+      padding: vars.$spacing-xl vars.$spacing-md;
     }
 
-    .card__title {
-      font-size: clamp(1.3rem, 2.5vw, 3rem);
-      max-width: 250px;
-    }
-
-    .card__subtitle {
-      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-      font-weight: 800;
-    }
-
-    @include mixins.mobile {
-      .card__content {
-        padding: vars.$spacing-lg;
-      }
-
-      .card__title {
-        font-size: clamp(2.6rem, 5vw, 4rem);
-      }
-
-      .card__subtitle {
-        font-size: clamp(1rem, 2vw, 1.3rem);
-      }
-    }
+    @include mixins.card-tablet-styles;
+    @include mixins.card-mobile-styles;
   }
 
   &__background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    @include mixins.absolute-full;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -95,11 +53,7 @@
   }
 
   &__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    @include mixins.absolute-full;
     background: linear-gradient(
       135deg,
       rgba(0, 0, 0, 0.6) 0%,
@@ -116,24 +70,23 @@
     flex-direction: column;
     justify-content: flex-start;
     color: vars.$text-light;
-    padding-top: vars.$spacing-xl;
+    padding: vars.$spacing-xl vars.$spacing-lg vars.$spacing-md;
   }
 
   &__title {
-    font-weight: 700;
+    @include mixins.font-weight-bold;
     line-height: 1.2;
     margin-bottom: vars.$spacing-sm;
+    font-size: clamp(1.3rem, 2.5vw, 3rem);
+    max-width: 230px;
   }
 
   &__subtitle {
-    font-size: 1rem;
+    @include mixins.font-weight-bold;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
     opacity: 0.9;
     margin-bottom: vars.$spacing-md;
     line-height: 1.4;
-
-    @include mixins.mobile {
-      font-size: 0.9rem;
-    }
   }
 
   &__description {
@@ -147,23 +100,6 @@
   }
 
   &__btn {
-    background: transparent;
-    color: vars.$secondary-color;
-    border: 2px solid vars.$secondary-color;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
     align-self: flex-start;
-
-    &:hover {
-      background: vars.$secondary-color;
-      color: vars.$text-dark;
-      transform: translateY(-2px);
-    }
-
-    @include mixins.mobile {
-      padding: 7px 40px;
-    }
   }
 }
-

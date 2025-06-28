@@ -5,10 +5,16 @@
 .text-section {
   padding: vars.$spacing-xl;
 
+  @include mixins.tablet {
+    padding: vars.$spacing-lg 0;
+  }
+
+  @include mixins.mobile {
+    padding: vars.$spacing-md 0;
+  }
+
   &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 vars.$spacing-md;
+    @include mixins.container;
   }
 
   &__title {
@@ -27,12 +33,10 @@
     opacity: 0.9;
   }
 
-  // Hidden checkbox for CSS-only toggle
   &__toggle {
     display: none;
   }
 
-  // Expandable content (hidden by default)
   &__expandable {
     max-height: 0;
     overflow: hidden;
@@ -40,7 +44,6 @@
     opacity: 0;
   }
 
-  // Extra content styling
   &__extra-content {
     color: vars.$text-gray;
     font-size: clamp(0.9rem, 1.5vw, 1rem);
@@ -49,7 +52,6 @@
     opacity: 0.9;
   }
 
-  // Read more/less label (acts as button)
   &__read-more {
     color: vars.$secondary-color;
     border: none;
@@ -66,14 +68,12 @@
     }
   }
 
-  // Show "Read less" text when checkbox is checked
   &__read-less-text {
     display: none;
   }
 
-  // When checkbox is checked
   &__toggle:checked ~ &__expandable {
-    max-height: 500px; // Adjust based on content
+    max-height: 500px;
     opacity: 1;
     margin-top: vars.$spacing-md;
   }
@@ -82,13 +82,8 @@
     .text-section__read-more-text {
       display: none;
     }
-    
     .text-section__read-less-text {
       display: inline;
     }
-  }
-
-  @include mixins.mobile {
-    padding: vars.$spacing-md 0;
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.scss";
 import earthImg from "../../assets/images/earth.png";
+import Button from "../button";
 
 function Hero() {
   return (
@@ -15,9 +16,9 @@ function Hero() {
             Where the possibilities are{" "}
             <span className="hero__subtitle--highlight">endless!</span>
           </p>
-          <button className="hero__btn button button--primary">
+          <Button variant="primary" className="hero__btn">
             Learn more
-          </button>
+          </Button>
         </div>
 
         <div className="hero__visual">

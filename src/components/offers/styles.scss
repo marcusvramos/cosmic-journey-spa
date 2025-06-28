@@ -5,13 +5,7 @@
   padding: vars.$spacing-xxl 0 0 0;
 
   &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 vars.$spacing-md;
-
-    @include mixins.mobile {
-      padding: 0 vars.$spacing-sm;
-    }
+    @include mixins.container;
   }
 
   &__title {

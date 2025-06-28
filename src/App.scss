@@ -2,12 +2,6 @@
 @use "./styles/mixins" as mixins;
 @use "./styles/reset";
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
 .app {
   display: flex;
   flex-direction: column;
@@ -20,13 +14,7 @@ body {
   }
 
   &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 vars.$spacing-md;
-
-    @include mixins.mobile {
-      padding: 0 vars.$spacing-sm;
-    }
+    @include mixins.container;
   }
 
   &__cards {
@@ -38,43 +26,6 @@ body {
   }
 }
 
-.button {
-  padding: 14px 40px;
-  border: none;
-  border-radius: 100px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  &--primary {
-    background: vars.$secondary-color;
-    color: vars.$text-dark;
-    border: 2px solid vars.$secondary-color;
-
-    &:hover {
-      background: vars.$secondary-color-hover;
-      border-color: vars.$secondary-color-hover;
-    }
-  }
-
-  &--secondary {
-    background: transparent;
-    color: vars.$secondary-color;
-    border: 2px solid vars.$secondary-color;
-
-    &:hover {
-      background: rgba(vars.$secondary-color, 0.1);
-      color: vars.$text-dark;
-    }
-  }
-}
 
 footer {
   flex-shrink: 0;

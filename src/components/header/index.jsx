@@ -1,6 +1,6 @@
-import React from "react";
-import { createPortal } from "react-dom";
 import "./styles.scss";
+import { createPortal } from "react-dom";
+
 import logoIcon from "../../assets/icons/logo.svg";
 import cartIcon from "../../assets/icons/cart.svg";
 import menuIcon from "../../assets/icons/menu.svg";
@@ -9,7 +9,13 @@ import closeIcon from "../../assets/icons/close.svg";
 function Header({ isMobileMenuOpen, toggleMobileMenu }) {
   const navItems = ["Home", "Products"];
 
-  // só monta o nav-mobile quando isOpen === true
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const mobileNav = (
     <nav
       className={`header__nav-mobile ${
@@ -43,15 +49,18 @@ function Header({ isMobileMenuOpen, toggleMobileMenu }) {
     <>
       <header className="header">
         <div className="header__container">
-          <div className="header__logo">
+          <button 
+            className="header__logo" 
+            onClick={scrollToTop}
+            aria-label="Go to top"
+          >
             <img
               src={logoIcon}
               alt="Space Logo"
               className="header__logo-img"
             />
-          </div>
+          </button>
 
-          {/* navegação desktop */}
           <nav className="header__nav-desktop">
             <ul className="header__nav-desktop-list">
               {navItems.map((item, idx) => (
@@ -92,7 +101,6 @@ function Header({ isMobileMenuOpen, toggleMobileMenu }) {
         </div>
       </header>
 
-      {/* portal apenas quando aberto */}
       {isMobileMenuOpen && createPortal(mobileNav, document.body)}
     </>
   );
