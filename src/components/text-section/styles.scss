@@ -1,0 +1,94 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixins" as mixins;
+@use "sass:color";
+
+.text-section {
+  padding: vars.$spacing-xl;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 vars.$spacing-md;
+  }
+
+  &__title {
+    color: vars.$text-light;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 600;
+    margin-bottom: vars.$spacing-sm;
+    line-height: 1.3;
+  }
+
+  &__content {
+    color: vars.$text-gray;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.6;
+    margin-bottom: vars.$spacing-md;
+    opacity: 0.9;
+  }
+
+  // Hidden checkbox for CSS-only toggle
+  &__toggle {
+    display: none;
+  }
+
+  // Expandable content (hidden by default)
+  &__expandable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  // Extra content styling
+  &__extra-content {
+    color: vars.$text-gray;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.6;
+    margin-bottom: vars.$spacing-md;
+    opacity: 0.9;
+  }
+
+  // Read more/less label (acts as button)
+  &__read-more {
+    color: vars.$secondary-color;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+    background: transparent;
+    display: inline-block;
+
+    &:hover {
+      color: color.adjust(vars.$secondary-color, $lightness: 15%);
+    }
+  }
+
+  // Show "Read less" text when checkbox is checked
+  &__read-less-text {
+    display: none;
+  }
+
+  // When checkbox is checked
+  &__toggle:checked ~ &__expandable {
+    max-height: 500px; // Adjust based on content
+    opacity: 1;
+    margin-top: vars.$spacing-md;
+  }
+
+  &__toggle:checked ~ &__read-more {
+    .text-section__read-more-text {
+      display: none;
+    }
+    
+    .text-section__read-less-text {
+      display: inline;
+    }
+  }
+
+  @include mixins.mobile {
+    padding: vars.$spacing-md 0;
+  }
+}

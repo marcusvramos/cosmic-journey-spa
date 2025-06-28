@@ -1,0 +1,22 @@
+@use "../../styles/variables" as vars;
+@use "../../styles/mixins" as mixins;
+
+.footer {
+  background: vars.$background-dark;
+  padding: 0 0 vars.$spacing-md 0;
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__text {
+    color: vars.$secondary-color;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+}
