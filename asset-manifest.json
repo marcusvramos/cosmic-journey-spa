@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/cosmic-journey-spa/static/css/main.c3a99daf.css",
+    "main.js": "/cosmic-journey-spa/static/js/main.9859cde1.js",
+    "static/media/hero-bg.png": "/cosmic-journey-spa/static/media/hero-bg.4aab6891aa0154909619.png",
+    "index.html": "/cosmic-journey-spa/index.html",
+    "main.c3a99daf.css.map": "/cosmic-journey-spa/static/css/main.c3a99daf.css.map",
+    "main.9859cde1.js.map": "/cosmic-journey-spa/static/js/main.9859cde1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3a99daf.css",
+    "static/js/main.9859cde1.js"
+  ]
+}
