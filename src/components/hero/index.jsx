@@ -26,6 +26,7 @@ function Hero() {
             src={earthImg}
             alt="Planet Earth with satellites"
             className="hero__earth-img"
+            loading="lazy"
           />
         </div>
       </div>

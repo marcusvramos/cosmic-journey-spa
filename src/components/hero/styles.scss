@@ -8,6 +8,10 @@
   position: relative;
   overflow: hidden;
   padding-top: 50px;
+  
+  @media (max-width: 768px) {
+    background-image: url("../../assets/images/hero-bg-mobile.png");
+  }
 
   &::before {
     content: "";
@@ -27,13 +31,13 @@
   &__container {
     position: relative;
     z-index: 2;
-    @include mixins.container;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "content visual";
     gap: vars.$spacing-xxl;
     align-items: center;
+    
+    @include mixins.container;
 
     @include mixins.mobile {
       grid-template-columns: 1fr;
