@@ -1,0 +1,46 @@
+<svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  style="background: transparent;"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feOffset in="SourceAlpha" dx="0" dy="2" result="off1"/>
+      <feGaussianBlur in="off1" stdDeviation="1.5" result="blur1"/>
+      <feColorMatrix
+        in="blur1"
+        type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0.2"
+        result="shadow"
+      />
+      <feBlend in="SourceGraphic" in2="shadow" mode="normal"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#dropshadow)">
+    <line
+      x1="6"
+      y1="6"
+      x2="18"
+      y2="18"
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+    <line
+      x1="18"
+      y1="6"
+      x2="6"
+      y2="18"
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+  </g>
+</svg>
