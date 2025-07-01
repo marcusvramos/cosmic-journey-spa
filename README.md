@@ -47,6 +47,7 @@ npm start
 ```
 src/
 ├── components/
+|   |── button/          # Reusable button components
 │   ├── header/          # Navigation header with mobile menu
 │   ├── hero/            # Landing section with CTA
 │   ├── card/            # Reusable card components
